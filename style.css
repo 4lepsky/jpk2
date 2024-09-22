@@ -6,6 +6,12 @@ body, h2, ul, li, form, input, button {
     font-family: Arial, sans-serif;
 }
 
+/* Set fixed width for the body to simulate desktop view */
+body {
+    width: 1024px; /* Set to your desired desktop width */
+    overflow-x: auto; /* Allow horizontal scrolling if needed */
+}
+
 /* Container styles */
 .contact-container {
     display: flex;
@@ -18,8 +24,8 @@ body, h2, ul, li, form, input, button {
 
 .contact-logo img {
     max-width: 480px; /* Adjust the logo size here */
-    /*height: auto; /* Maintain aspect ratio */
-    /*margin-bottom: 20px; /* Add some space below the logo */ 
+    /* height: auto; /* Maintain aspect ratio */
+    /* margin-bottom: 20px; /* Add some space below the logo */ 
 }
 
 .contact-left, .contact-right {
@@ -111,18 +117,16 @@ button img {
     background-color: #002a5c; /* Darker blue for active state */
 }
 
-
-
-/* Responsive font size for small screens */
+/* Disable responsive font size for small screens */
 @media (max-width: 600px) {
     .contact-left-title h2 {
-        font-size: 20px; /* Adjust size for smaller screens */
+        font-size: 20px; /* Keep size the same */
     }
 }
 
-/* Responsive font size for very small screens */
+/* Disable responsive font size for very small screens */
 @media (max-width: 400px) {
     .contact-left-title h2 {
-        font-size: 16px; /* Further adjust size for very small screens */
+        font-size: 16px; /* Keep size the same */
     }
 }
