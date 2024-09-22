@@ -6,12 +6,6 @@ body, h2, ul, li, form, input, button {
     font-family: Arial, sans-serif;
 }
 
-/* Set fixed width for the body to simulate desktop view */
-body {
-    width: 1024px; /* Set to your desired desktop width */
-    overflow-x: auto; /* Allow horizontal scrolling if needed */
-}
-
 /* Container styles */
 .contact-container {
     display: flex;
@@ -20,12 +14,13 @@ body {
     padding: 20px;
     min-height: 100vh;
     background-color: #fff;
+    width: 100%; /* Make sure it takes the full width of the device */
+    max-width: 1024px; /* Optional: Restrict maximum width for larger screens */
+    margin: 0 auto; /* Center the content on larger screens */
 }
 
 .contact-logo img {
     max-width: 480px; /* Adjust the logo size here */
-    /* height: auto; /* Maintain aspect ratio */
-    /* margin-bottom: 20px; /* Add some space below the logo */ 
 }
 
 .contact-left, .contact-right {
@@ -44,7 +39,7 @@ body {
     font-size: 20px;
     color: #333;
     margin-bottom: 10px;
-    text-align: center; /* Center the title text */
+    text-align: center;
 }
 
 .contact-left-title hr {
@@ -62,7 +57,7 @@ label {
 .contact-inputs {
     width: 100%;
     padding: 10px;
-    margin-bottom: 20px; /* Updated margin to create space between input fields */
+    margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
@@ -98,35 +93,50 @@ button img {
 }
 
 .menu ul li a {
-    display: inline-block; /* Make the link a block element */
-    padding: 10px 20px; /* Add padding for spacing */
-    background-color: #0056b3; /* Darker blue background color */
-    color: #fff; /* White text color */
-    border-radius: 5px; /* Rounded corners */
-    text-decoration: none; /* Remove underline */
-    font-size: 18px; /* Match the font size */
-    font-weight: bold; /* Make text bold */
-    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0056b3;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
 .menu ul li a:hover {
-    background-color: #003d7a; /* Even darker blue for hover effect */
+    background-color: #003d7a;
 }
 
 .menu ul li a:active {
-    background-color: #002a5c; /* Darker blue for active state */
+    background-color: #002a5c;
 }
 
-/* Disable responsive font size for small screens */
+/* Optional: Adjustments for smaller screens */
 @media (max-width: 600px) {
+    .contact-container {
+        padding: 10px;
+    }
+
     .contact-left-title h2 {
-        font-size: 20px; /* Keep size the same */
+        font-size: 20px;
+    }
+
+    .contact-left, .contact-right {
+        max-width: 100%; /* Allow full width on smaller screens */
+    }
+
+    button {
+        font-size: 16px;
     }
 }
 
-/* Disable responsive font size for very small screens */
 @media (max-width: 400px) {
     .contact-left-title h2 {
-        font-size: 16px; /* Keep size the same */
+        font-size: 18px;
+    }
+
+    .contact-left, .contact-right {
+        max-width: 100%;
     }
 }
