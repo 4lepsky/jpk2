@@ -6,6 +6,13 @@ body, h2, ul, li, form, input, button {
     font-family: Arial, sans-serif;
 }
 
+/* Fixed width for the body to simulate desktop view */
+body {
+    width: 1024px; /* Set this to your preferred desktop width */
+    margin: 0 auto; /* Center the content */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
 /* Container styles */
 .contact-container {
     display: flex;
@@ -14,9 +21,8 @@ body, h2, ul, li, form, input, button {
     padding: 20px;
     min-height: 100vh;
     background-color: #fff;
-    width: 100%; /* Make sure it takes the full width of the device */
-    max-width: 1024px; /* Optional: Restrict maximum width for larger screens */
-    margin: 0 auto; /* Center the content on larger screens */
+    width: 100%;
+    max-width: 1024px; /* Ensure the container also follows the fixed width */
 }
 
 .contact-logo img {
@@ -112,30 +118,18 @@ button img {
     background-color: #002a5c;
 }
 
-/* Optional: Adjustments for smaller screens */
+/* Disable responsive scaling for mobile */
 @media (max-width: 600px) {
-    .contact-container {
-        padding: 10px;
-    }
-
-    .contact-left-title h2 {
-        font-size: 20px;
+    body {
+        width: 1024px; /* Maintain desktop width on small screens */
     }
 
     .contact-left, .contact-right {
-        max-width: 100%; /* Allow full width on smaller screens */
-    }
-
-    button {
-        font-size: 16px;
+        max-width: 100%; /* Prevent shrinking on small devices */
     }
 }
 
 @media (max-width: 400px) {
-    .contact-left-title h2 {
-        font-size: 18px;
-    }
-
     .contact-left, .contact-right {
         max-width: 100%;
     }
